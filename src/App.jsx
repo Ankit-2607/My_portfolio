@@ -8,6 +8,7 @@ import Contact from './sections/Contact.jsx';
 import Education from './sections/Education.jsx';
 import ProjectSection from './sections/Project.jsx';
 import Footer from './sections/Footer.jsx';
+import Certification from './sections/Certification.jsx';
 
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -20,6 +21,7 @@ const App = () => {
       <About/>
       <ProjectSection />
       <Education/>
+      <Certification/>
       <Contact/>
       <Footer/>
     </main>

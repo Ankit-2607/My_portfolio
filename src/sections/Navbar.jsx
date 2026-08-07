@@ -171,7 +171,7 @@ const Navbar = () => {
               >
                 {link.title}
                 {/* Underline animation */}
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
@@ -179,7 +179,7 @@ const Navbar = () => {
           {/* Download CV Button */}
           <li>
             <a
-              href="/Ankit_kumar_CV.pdf"
+              href="/july_CV(2).pdf"
               download="Ankit_Kumar_CV.pdf"
               className="px-5 py-2 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all duration-300"
             >

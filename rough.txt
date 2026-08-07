@@ -1,0 +1,329 @@
+// // import React, { useRef } from "react";
+// import gsap from "gsap";
+// import { useEffect, useRef } from "react";
+// import profile from "../assets/profile.png";
+
+// const RightSection = () => {
+//   const ribbonRef = useRef(null);
+//   const shadowRef = useRef(null);
+//   const cardRef = useRef(null);
+//   const badgeRef = useRef(null);
+
+//     useEffect(() => {
+//     const badge = badgeRef.current;
+
+//   // Entry animation
+//   gsap.fromTo(
+//     badge,
+//     {
+//       y: -80,
+//       opacity: 0,
+//       rotation: -8,
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       rotation: 0,
+//       duration: 1.5,
+//       ease: "bounce.out",
+//     },
+//   );
+
+//   // Idle floating
+//   gsap.to(badge, {
+//     y: "+=8",
+//     duration: 2,
+//     repeat: -1,
+//     yoyo: true,
+//     ease: "sine.inOut",
+//   });
+
+//   const moveBadge = (e) => {
+//     const rect = badge.getBoundingClientRect();
+
+//     const centerX = rect.left + rect.width / 2;
+
+//     const diff = e.clientX - centerX;
+
+//     // Badge Animation
+//     gsap.to(badge, {
+//       rotation: gsap.utils.clamp(-18, 18, diff / 18),
+//       duration: 0.8,
+//       ease: "power3.out",
+//       transformOrigin: "top center",
+//     });
+
+//     // Shadow Animation
+//     gsap.to(shadowRef.current, {
+//       x: diff / 10,
+//       scaleX: 1 - Math.abs(diff) / 800,
+//       duration: 0.8,
+//       ease: "power3.out",
+//     });
+//   };
+
+//   const resetBadge = () => {
+//     // Reset Badge
+//     gsap.to(badge, {
+//       rotation: 0,
+//       duration: 1.2,
+//       ease: "elastic.out(1,0.4)",
+//       transformOrigin: "top center",
+//     });
+
+//     // Reset Shadow
+//     gsap.to(shadowRef.current, {
+//       x: 0,
+//       scaleX: 1,
+//       duration: 1,
+//       ease: "power3.out",
+//     });
+//   };
+
+//   window.addEventListener("mousemove", moveBadge);
+//   window.addEventListener("mouseleave", resetBadge);
+
+//   return () => {
+//     window.removeEventListener("mousemove", moveBadge);
+//     window.removeEventListener("mouseleave", resetBadge);
+//   };
+// }, []);
+
+//   return (
+//     <div className="relative w-full lg:w-1/2 h-screen flex justify-center">
+//       <div
+//         ref={badgeRef}
+//         className="absolute left-1/2 -translate-x-1/2 top-0 origin-top"
+//       >
+//         {/* Ribbon */}
+//         <div
+//           ref={badgeRef}
+//           className="absolute left-1/2 -translate-x-1/2 top-0"
+//           style={{
+//             transformOrigin: "top center",
+//             transformStyle: "preserve-3d",
+//           }}
+//         >
+//           <svg
+//             width="120"
+//             height="520"
+//             viewBox="0 0 120 520"
+//             className="overflow-visible"
+//           >
+//             <defs>
+//               {/* Ribbon Gradient */}
+
+//               <linearGradient
+//                 id="ribbonGradient"
+//                 x1="0%"
+//                 y1="0%"
+//                 x2="100%"
+//                 y2="0%"
+//               >
+//                 <stop offset="0%" stopColor="#5B21B6" />
+//                 <stop offset="50%" stopColor="#7C3AED" />
+//                 <stop offset="100%" stopColor="#F97316" />
+//               </linearGradient>
+
+//               {/* Cloth Pattern */}
+
+//               <pattern
+//                 id="fabric"
+//                 width="8"
+//                 height="8"
+//                 patternUnits="userSpaceOnUse"
+//               >
+//                 <path
+//                   d="M0 0L8 8M8 0L0 8"
+//                   stroke="rgba(255,255,255,.08)"
+//                   strokeWidth="1"
+//                 />
+//               </pattern>
+//             </defs>
+
+//             {/* Main Ribbon */}
+
+//             <rect
+//               x="38"
+//               y="0"
+//               width="44"
+//               height="380"
+//               rx="8"
+//               fill="url(#ribbonGradient)"
+//             />
+
+//             {/* Fabric Texture */}
+
+//             <rect
+//               x="38"
+//               y="0"
+//               width="44"
+//               height="330"
+//               rx="8"
+//               fill="url(#fabric)"
+//             />
+
+//             {/* Left Stitch */}
+
+//             <line
+//               x1="44"
+//               y1="0"
+//               x2="44"
+//               y2="340"
+//               stroke="rgba(255,255,255,.35)"
+//               strokeDasharray="2 5"
+//             />
+
+//             {/* Right Stitch */}
+
+//             <line
+//               x1="76"
+//               y1="0"
+//               x2="76"
+//               y2="340"
+//               stroke="rgba(255,255,255,.35)"
+//               strokeDasharray="2 5"
+//             />
+
+//             {/* Printed Text */}
+
+//             <g transform="translate(62,25) rotate(90)">
+//               <text
+//                 fill="white"
+//                 fontSize="12"
+//                 fontWeight="700"
+//                 letterSpacing="3"
+//               >
+//                 ANKIT • FULL STACK • REACT • GSAP •
+//               </text>
+//             </g>
+
+//             {/* Top Fold */}
+
+//             <rect
+//               x="38"
+//               y="0"
+//               width="44"
+//               height="20"
+//               fill="rgba(255,255,255,.12)"
+//             />
+//           </svg>
+//         </div>
+
+//         {/* ================= METAL CONNECTOR ================= */}
+
+//         <div className="absolute top-[370px] left-1/2 -translate-x-1/2 z-40">
+//           {/* Clamp */}
+
+//           <div
+//             className="w-12 h-7 rounded-md
+//                   bg-gradient-to-b
+//                   from-gray-100
+//                   via-gray-300
+//                   to-gray-500
+//                   border
+//                   border-gray-400
+//                   shadow-lg
+//                   relative"
+//           >
+//             <div
+//               className="absolute
+//                    left-1/2
+//                    top-1/2
+//                    -translate-x-1/2
+//                    -translate-y-1/2
+//                    w-5
+//                    h-3
+//                    rounded-sm
+//                    bg-gray-600"
+//             ></div>
+//           </div>
+
+//           {/* Ring */}
+
+//           <div className="flex justify-center mt-1">
+//             <div
+//               className="w-8 h-8
+//                      rounded-full
+//                      border-[3px]
+//                      border-gray-500"
+//             ></div>
+//           </div>
+
+//           {/* Hook */}
+
+//           <div className="flex justify-center">
+//             <div
+//               className="w-[4px]
+//                      h-4
+//                      bg-gray-500
+//                      rounded-full"
+//             ></div>
+//           </div>
+//         </div>
+
+//         {/* ================= ID CARD ================= */}
+
+//         <div
+//           ref={cardRef}
+//           className="absolute
+//       z-50
+//       top-[450px]
+//       left-1/2
+//       -translate-x-1/2
+//       w-[350px]
+//       bg-white
+//       rounded-2xl
+//       shadow-[0_25px_50px_rgba(0,0,0,.25)]
+//       overflow-hidden
+//       origin-top
+//       cursor-pointer
+//       transition-all duration-500 hover:scale-[1.03]"
+//           style={{
+//             transformStyle: "preserve-3d",
+//           }}
+//         >
+//           {/* Photo */}
+
+//           <div className="p-3">
+//             <img
+//               src={profile}
+//               alt="Profile"
+//               className="w-full
+//                    h-[320px]
+//                    object-cover
+//                    rounded-md"
+//             />
+//           </div>
+
+//           {/* Divider */}
+
+//           <div className="w-full h-px bg-gray-200"></div>
+
+//           {/* Info */}
+
+//           <div className="py-4 text-center">
+//             <h2 className="text-xl font-bold">Ankit Kumar</h2>
+
+//             <p className="text-gray-500 mt-1">Full Stack Developer</p>
+//           </div>
+//         </div>
+
+//         <div
+//           ref={shadowRef}
+//           className="absolute
+//              top-[820px]
+//              left-1/2
+//              -translate-x-1/2
+//              w-52
+//              h-5
+//              bg-black/20
+//              blur-xl
+//              rounded-full"
+//         />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default RightSection;

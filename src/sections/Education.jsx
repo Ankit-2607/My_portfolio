@@ -388,11 +388,11 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="relative w-full min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] pt-32 pb-60 text-white overflow-hidden"
+      className="relative w-full min-h-screen bg-linear-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] pt-32 pb-60 text-white overflow-hidden"
     >
       {/* Background fades */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/80 via-black/20 to-transparent pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
 
       {/* Section Title */}
       <div className="text-center mb-28 relative z-10">
@@ -408,7 +408,7 @@ const Education = () => {
       </div>
 
       {/* Timeline Center Line */}
-      <div className="absolute left-1/2 top-[220px] h-[calc(100%-250px)] w-[3px] bg-gradient-to-b from-transparent via-purple-500 to-transparent transform -translate-x-1/2"></div>
+      <div className="absolute left-1/2 top-[220px] h-[calc(100%-250px)] w-[3px] bg-linear-to-b from-transparent via-purple-500 to-transparent transform -translate-x-1/2"></div>
 
       {/* Timeline Items */}
       <div className="max-w-6xl mx-auto flex flex-col gap-32 px-6">
@@ -424,7 +424,7 @@ const Education = () => {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-500 w-[90%] md:w-[80%]">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="bg-gradient-to-r from-purple-500 to-amber-500 p-4 rounded-full shadow-lg">
+                  <div className="bg-linear-to-r from-purple-500 to-amber-500 p-4 rounded-full shadow-lg">
                     {item.icon}
                   </div>
                   <h2 className="text-2xl md:text-3xl font-semibold text-white">
@@ -439,7 +439,7 @@ const Education = () => {
 
             {/* Spacer + Timeline Dot */}
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-amber-500 rounded-full shadow-[0_0_20px_rgba(168,85,247,0.8)] animate-pulse"></div>
+              <div className="w-6 h-6 bg-linear-to-r from-purple-500 to-amber-500 rounded-full shadow-[0_0_20px_rgba(168,85,247,0.8)] animate-pulse"></div>
             </div>
           </div>
         ))}

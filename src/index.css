@@ -30,6 +30,16 @@ body {
   }
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 
 @utility flex-center {
   @apply flex justify-center items-center;
