@@ -171,7 +171,7 @@ window.removeEventListener("mouseleave",reset);
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 sm:px-12 md:px-20 lg:px-32 bg-gray-100  overflow-hidden relative"
+      className="min-h-screen lg:h-[900px] lg:min-h-0 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-12 md:px-20 lg:px-32 bg-gray-100  overflow-hidden relative"
     >
       {/* ✨ Animated Grid Background */}
       <div className="absolute inset-0 -z-10 grid grid-cols-21 grid-rows-14 opacity-50">
@@ -244,7 +244,6 @@ window.removeEventListener("mouseleave",reset);
           </a>
         </div>
       </div>
-
 
       {/* Right Side */}
 
