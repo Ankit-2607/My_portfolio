@@ -104,7 +104,7 @@ const About = () => {
             <span className="text-amber-600 font-medium">
               Full Stack Developer
             </span>{" "}
-            and an MCA first-year student. With a background in Bachelor of
+            and an MCA second-year student. With a background in Bachelor of
             Arts, I’ve transitioned into technology to blend creativity with
             logic.
           </p>
@@ -147,7 +147,7 @@ const About = () => {
               gradient: "from-purple-500 to-amber-500",
             },
             {
-              title: "1",
+              title: "3+",
               subtitle: "Completed Projects",
               gradient: "from-amber-500 to-purple-500",
             },
@@ -158,7 +158,7 @@ const About = () => {
             },
             {
               title: "Hobbies",
-              subtitle: "Sketching, Cricket, Online Games",
+              subtitle: "Sketching, Online Games",
               bg: "bg-white text-gray-900",
             },
           ].map((box, i) => (
@@ -167,7 +167,7 @@ const About = () => {
               ref={(el) => (infoBoxesRef.current[i] = el)}
               className={`${
                 box.gradient
-                  ? `bg-gradient-to-r ${box.gradient} text-white`
+                  ? `bg-linear-to-r ${box.gradient} text-white`
                   : box.bg
               } rounded-2xl p-6 flex flex-col items-center justify-center shadow-lg transition-all duration-500`}
             >
@@ -184,7 +184,7 @@ const About = () => {
       <div className="flex items-center justify-center mt-24 mb-6 w-full">
         {/* Left line and dot */}
         <div className="flex items-center flex-1 justify-end">
-          <span className="h-[2px] w-full max-w-full bg-gradient-to-l from-black to-transparent"></span>
+          <span className="h-0.5 w-full max-w-full bg-linear-to-l from-black to-transparent"></span>
           <span className="w-2 h-2 bg-black rounded-full mr-2"></span>
         </div>
 
@@ -196,7 +196,7 @@ const About = () => {
         {/* Right line and dot */}
         <div className="flex items-center flex-1 justify-start">
           <span className="w-2 h-2 bg-black rounded-full ml-2"></span>
-          <span className="h-[2px] w-full max-w-full bg-gradient-to-r from-black to-transparent"></span>
+          <span className="h-0.5 w-full max-w-full bg-linear-to-r from-black to-transparent"></span>
         </div>
       </div>
 
@@ -204,11 +204,11 @@ const About = () => {
       {/* Infinite Scrolling Skills Band */}
       <div
         ref={bandRef}
-        className="relative overflow-hidden w-full mt-6 mb-10 py-6 bg-gradient-to-r from-gray-100 via-white to-gray-100 shadow-[0px_20px_rgba(0,0,0,0.1.5)]"
+        className="relative overflow-hidden w-full mt-6 mb-10 py-6 bg-linear-to-r from-gray-100 via-white to-gray-100 shadow-[0px_20px_rgba(0,0,0,0.1.5)]"
       >
         {/* Fading edges */}
-        <div className="absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-gray-100 via-white/80 to-transparent z-20 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-gray-100 via-white/80 to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 h-full w-32 bg-linear-to-r from-gray-100 via-white/80 to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 h-full w-32 bg-linear-to-l from-gray-100 via-white/80 to-transparent z-20 pointer-events-none"></div>
 
         {/* Band content */}
         <div

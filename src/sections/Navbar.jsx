@@ -179,7 +179,7 @@ const Navbar = () => {
           {/* Download CV Button */}
           <li>
             <a
-              href="/july_CV(2).pdf"
+              href="public/Aug_CV.pdf"
               download="Ankit_Kumar_CV.pdf"
               className="px-5 py-2 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all duration-300"
             >

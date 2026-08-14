@@ -6,18 +6,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "ResolveDesk",
     description:
       "A front-end exercise built using React, Tailwind CSS to improve the front-end skills while learning  frotend.",
     image: "/project11.png",
-    link: "https://github.com/Ankit-2607/xora",
+    link: "https://github.com/Ankit-2607/ResolveDesk",
   },
   {
-    title: "E-Commerce App",
+    title: "BiblioX - E-library Application",
     description:
       "A full-stack e-commerce web app with user authentication, product filters, and cart functionality using React, Node.js, and MongoDB.",
-    image: "/project2.png",
-    link: "https://github.com/yourusername/ecommerce-app",
+    image: "/Bilbox.png",
+    link: "https://github.com/Ankit-2607/E-library-application",
   },
 ];
 

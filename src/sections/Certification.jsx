@@ -6,11 +6,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const certificates = [
-  { title: "Full Stack Web Development", org: "Coursera", year: "2024" },
-  { title: "JavaScript Mastery", org: "Udemy", year: "2023" },
-  { title: "Python for Developers", org: "Google", year: "2023" },
-  { title: "React Advanced Concepts", org: "Meta", year: "2024" },
-  { title: "Backend Development", org: "Node Academy", year: "2025" },
+  { title: "Python 101 for Data Science ", org: "IBM", year: "2026" },
+  { title: "Full Stack Web Development", org: "Udemy", year: "2025" },
+  // { title: "Python for Developers", org: "Google", year: "2023" },
+  // { title: "React Advanced Concepts", org: "Meta", year: "2024" },
+  // { title: "Backend Development", org: "Node Academy", year: "2025" },
 ];
 
 const Certification = () => {
