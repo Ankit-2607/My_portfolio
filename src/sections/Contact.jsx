@@ -12,7 +12,7 @@ import {
 // Get a free access key at https://web3forms.com/ — just enter the
 // email you want messages delivered to, no account/signup needed, the
 // key arrives by email instantly. Paste it below.
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = "2dae3e10-5f88-4e52-8ea3-4002b69dd67e";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
