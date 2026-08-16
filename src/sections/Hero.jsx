@@ -178,7 +178,7 @@ window.removeEventListener("mouseleave",reset);
         {[...Array(294)].map((_, i) => (
           <div
             key={i}
-            className="border border-gray-300 hover:bg-linear-to-br hover:from-orange-400 hover:to-purple-400 hover:opacity-80 transition-all duration-500"
+            className="border border-gray-300 hover:bg-linear-to-br hover:from-orange-400 hover:to-purple-900 hover:opacity-90 transition-all duration-500"
           ></div>
         ))}
       </div>
