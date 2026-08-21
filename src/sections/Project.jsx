@@ -8,14 +8,14 @@ const projects = [
   {
     title: "ResolveDesk",
     description:
-      "A front-end exercise built using React, Tailwind CSS to improve the front-end skills while learning  frotend.",
+      "A web-based help desk application that allows users to submit support tickets, track their status, and communicate with support agents. It provides a user-friendly interface for managing customer inquiries and improving customer support efficiency.",
     image: "/resolvedesk.png",
     link: "https://github.com/Ankit-2607/ResolveDesk",
   },
   {
     title: "BiblioX - E-library Application",
     description:
-      "A full-stack e-commerce web app with user authentication, product filters, and cart functionality using React, Node.js, and MongoDB.",
+      "A JavaFX-based digital library application that allows users to browse and read books, manage their wishlist and personal library, track reading progress, continue books from the last-read page, and manage their profiles.",
     image: "/Bilbox.png",
     link: "https://github.com/Ankit-2607/E-library-application",
   },
