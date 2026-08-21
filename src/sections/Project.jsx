@@ -9,7 +9,7 @@ const projects = [
     title: "ResolveDesk",
     description:
       "A front-end exercise built using React, Tailwind CSS to improve the front-end skills while learning  frotend.",
-    image: "/project11.png",
+    image: "/resolvedesk.png",
     link: "https://github.com/Ankit-2607/ResolveDesk",
   },
   {
